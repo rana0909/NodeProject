@@ -1,0 +1,23 @@
+<h3>List of restaurants:</h3>
+{{#each data}}
+  <div style="border: 1px solid #0033a0; padding: 10px;">
+    <p>Name:
+      <b>{{this.name}}</b>
+      &nbsp; Restaurant Id:
+      <b>{{this.restaurant_id}}</b>
+      &nbsp; Cuisine:
+      <b>{{this.cuisine}}</b>
+      &nbsp; Borough:
+      <b>{{this.borough}}</b></p>
+    <p>Address:
+      <b>{{this.address.building}},
+        {{this.address.street}}
+        -
+        {{this.address.zipcode}}</b></p>
+    <p>Grades:
+      {{#each this.grades}}
+        <span>{{this.grade}} - {{this.score}} &nbsp;</span>
+      {{/each}}
+    </p>
+  </div>
+{{/each}}
